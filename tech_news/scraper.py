@@ -60,7 +60,7 @@ def scrape_noticia(html_content):
 
 # Requisito 5
 def get_tech_news(amount):
-    url = 'https://blog.betrybe.com/'
+    url = "https://blog.betrybe.com/"
     news_links = []
     news = []
 
