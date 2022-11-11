@@ -19,13 +19,12 @@ def top_5_news():
 def top_5_categories():
     news_from_db = find_news()
     categories = [each_new["category"] for each_new in news_from_db]
-    count_categories = Counter(categories).most_common(5)
+    sorted_array = sorted(categories)
+    count_categories = Counter(sorted_array).most_common(5)
 
-    teste = []
+    result = []
     for each in count_categories:
         category, times = each
-        teste.append(category)
+        result.append(category)
 
-    # print(count_categories)
-    # print(teste)
-    return teste
+    return result
